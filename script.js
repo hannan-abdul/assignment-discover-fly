@@ -47,6 +47,7 @@ function totalAmount(){
 
     const grandTotal = subtotal + vat;
     document.getElementById('grandTotal').innerText = grandTotal;
+    return grandTotal;
 }
 // book now button 
 document.getElementById('bookNow').addEventListener('click', function(){
