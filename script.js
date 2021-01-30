@@ -1,13 +1,7 @@
-// document.getElementById('firstClassIncrease').addEventListener('click', function(){
-//     firstClassTicket(true);
-// })
-// document.getElementById('firstClassDecrease').addEventListener('click', function(){
-//     firstClassTicket(false);
-// })
+// first class ticket 
 function firstClassTicket(valueIncrease){
     const firstClassCounter = document.getElementById('firstClassCounter');
     const firstClassNumber = parseInt(firstClassCounter.value);
-    // const firstClassNewNumber = firstClassNumber - 1;
     let firstClassNewNumber = firstClassNumber;
     if(valueIncrease == true){
         firstClassNewNumber = firstClassNumber + 1;
@@ -20,36 +14,10 @@ function firstClassTicket(valueIncrease){
     document.getElementById('firstClassTotal').innerText = firstClassTotal;
     totalAmount();
 }
-// first class
-// document.getElementById('firstClassIncrease').addEventListener('click', function(){
-//     const firstClassCounter = document.getElementById('firstClassCounter');
-//     const firstClassNumber = parseInt(firstClassCounter.value);
-//     const firstClassNewNumber = firstClassNumber + 1;
-//     firstClassCounter.value = firstClassNewNumber;
-//     const firstClassTotal = firstClassNewNumber * 150;
-//     document.getElementById('firstClassTotal').innerText = firstClassTotal;
-//     totalAmount();
-// })
-// document.getElementById('firstClassDecrease').addEventListener('click', function(){
-//     const firstClassCounter = document.getElementById('firstClassCounter');
-//     const firstClassNumber = parseInt(firstClassCounter.value);
-//     const firstClassNewNumber = firstClassNumber - 1;
-//     firstClassCounter.value = firstClassNewNumber;
-//     const firstClassTotal = firstClassNewNumber * 150;
-//     document.getElementById('firstClassTotal').innerText = firstClassTotal;
-//     totalAmount();
-// })
-// economy class
-// document.getElementById('economyIncrease').addEventListener('click', function(){
-//     economyTicket(true);
-// })
-// document.getElementById('economyDecrease').addEventListener('click', function(){
-//     economyTicket(false);
-// })
+// economy ticket 
 function economyTicket(valueIncrease){
     const economyCounter = document.getElementById('economyCounter');
     const economyNumber = parseInt(economyCounter.value);
-    // const economyNewNumber = economyNumber - 1;
     let economyNewNumber = economyNumber;
     if(valueIncrease == true){
         economyNewNumber = economyNumber + 1;
@@ -60,8 +28,9 @@ function economyTicket(valueIncrease){
     economyCounter.value = economyNewNumber;
     const economyTotal = economyNewNumber * 100;
     document.getElementById('economyTotal').innerText = economyTotal;
-    totalAmount()
+    totalAmount();
 }
+
 // total amount
 function totalAmount(){
     const firstClassCounter = document.getElementById('firstClassCounter');
@@ -79,7 +48,16 @@ function totalAmount(){
     const grandTotal = subtotal + vat;
     document.getElementById('grandTotal').innerText = grandTotal;
 }
-// function totalAmountValue(ticket){
-//     const ticketInput = document.getElementById('economyCounter');
-//     const ticketCount = parseInt(economyCounter.value);
-// }
+// book now button 
+document.getElementById('bookNow').addEventListener('click', function(){
+    const disappear = document.getElementById('disappear');
+    disappear.style.display = 'none';
+    const bookedArea = document.getElementById('bookedArea');
+    bookedArea.style.display = 'block';
+})
+document.getElementById('homeBtn').addEventListener('click', function(){
+    const disappear = document.getElementById('disappear');
+    disappear.style.display = 'block';
+    const bookedArea = document.getElementById('bookedArea');
+    bookedArea.style.display = 'none';
+})

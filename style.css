@@ -13,9 +13,11 @@ body{
     background-attachment: scroll;
     background-size: cover;
 }
-.flex{
-
+.plus-minus{
+    display: inherit;
+    padding-top: 20px;
 }
+
 nav{
     height: 50px;
     width: 100%;
@@ -127,4 +129,17 @@ nav ul li a:hover, a.active{
 .amount{
     display: flex;
     justify-content: space-between;
+}
+#bookedArea{
+    display: none;
+    text-align: center;
+}
+#bookedArea h3{
+    line-height: 2em;
+}
+.tic{
+    font-size: 50px;
+}
+#homeBtn{
+    margin-top: 20px;
 }

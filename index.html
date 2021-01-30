@@ -20,7 +20,7 @@
     <header class="container">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a class="active" href="#">Sign Up</a></li>
@@ -31,78 +31,85 @@
     <!--Booking Section-->
     <main class="main-content container">
         <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
+            <div id="disappear">
+                <h3>Booking Flights</h3>
                 <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
                 </div>
                 <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
                 </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($ <span id="firstClassTotal">0</span>)</label>
+                        <input id="firstClassCounter" class="inp-style inp-width" type="number" name="" value="0">
+                    </div>
+                    <div class="plus-minus">
+                        <!-- button plus minus-->
+                        <button onclick="firstClassTicket(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="firstClassTicket(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>  
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($ <span id="economyTotal">0</span>)</label>
+                        <input id="economyCounter" class="inp-style inp-width" type="number" name="" value="0">    
+                    </div>
+                    <div class="plus-minus">
+                        <button onclick="economyTicket(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        <button onclick="economyTicket(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="subtotal">0</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="totalVat">0</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="grandTotal">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="bookNow" class="btn-style">Book Now</button>
             </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($ <span id="firstClassTotal">0</span>)</label>
-                    <input id="firstClassCounter" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <button onclick="firstClassTicket(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                <button onclick="firstClassTicket(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                <!-- <div class="plus-minus-btn">
-                    <!-- button plus minus 
-                    
-                </div> -->
+            <div id="bookedArea">
+                <i class="tic fas fa-check-circle"></i>
+                <h3>Your Purchase is Completed</h3>
+                <h2>Have a Nice Journey</h2>
+                <button id="homeBtn" class="btn-style">Home</button>
             </div>
             
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($ <span id="economyTotal">0</span>)</label>
-                    <input id="economyCounter" class="inp-style inp-width" type="number" name="" value="0">
-                </div>
-                <div class="plus-minus-btn">
-                    <!-- button plus minus  -->
-                    <button onclick="economyTicket(true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="economyTicket(false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="subtotal">0</span></p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="totalVat">0</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="grandTotal">0</span></p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content">
